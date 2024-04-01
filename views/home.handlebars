@@ -1,0 +1,8 @@
+<h1>All the projects!</h1>
+{{#each projects}}
+<a href="/project/{{id}}"><h3>{{name}}</h3></a>
+<h4>{{date_created}}</h4>
+<h4>Needed funding: {{needed_funding}}</h4>
+<p>{{description}}</p>
+<hr>
+{{/each}}

@@ -1,0 +1,21 @@
+<h1>Welcome back, {{name}}!</h1>
+<h2>Add a project</h2>
+<form action="" id="newProject">
+    <label for="projectName">name:</label>
+    <input type="text" id="projectName" placeholder="name">
+    <label for="projectDescription">description:</label>
+    <input type="text" id="projectDescription" placeholder="description">
+    <label for="projectFunding">funding needed:</label>
+    <input type="number" id="projectFunding">
+    <button>Add project!</button>
+</form>
+{{#each projects}}
+    <h3>{{name}}</h3>
+<h4>{{date_created}}</h4>
+<h4>Needed funding: {{needed_funding}}</h4>
+<p>{{description}}</p>
+<button class="del-button" data-proj-id="{{id}}">Delete</button>
+<hr>
+{{/each}}
+
+<script src="/js/profile.js"></script>
